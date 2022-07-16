@@ -73,7 +73,6 @@ const Word = ({ word1, turn, order, setTurn, setGameOver, gameOver }) => {
     const checkWord = () => {
         let copyState = stateOfWord
 
-        console.log(word1)
 
         for (let i = 0; i < 5; i++) {
             if (input[i] === word1[i]) {

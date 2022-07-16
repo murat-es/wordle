@@ -19,17 +19,6 @@ function App() {
         setGetWord(data.words[0].split("")))
   }, [])
 
-
-  // useLayoutEffect(() => {
-  //   async function fetchData() {
-  //     const response = await fetch("https://3.68.135.14/api/word/5/1");
-  //     const data = await response.json();
-  //     setGetWord(data.words[0].split(""));
-  //   }
-  //   fetchData()
-  // }, []);
-
-
   return (
     <div className={classes.App}>
       {
