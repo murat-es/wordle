@@ -1,0 +1,45 @@
+.container {
+  margin-top: 1rem;
+  width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 60%;
+  }
+}
+
+.word {
+  border: 2px solid rgb(197, 194, 194);
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.activeWord {
+  border-color: gray;
+}
+
+.green {
+  color: white;
+  border-color: green;
+  background-color: green;
+}
+
+.red {
+  color: white;
+  border-color: red;
+  background-color: red;
+}
+
+.gray {
+  color: white;
+  border-color: gray;
+  background-color: gray;
+}
