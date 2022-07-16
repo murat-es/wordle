@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback } from 'react'
 import classes from "./Word.module.css"
 
 const Word = ({ word1, turn, order, setTurn, setGameOver, gameOver }) => {
-    console.log("word1", word1)
     const [input, setInput] = useState(["", "", "", "", ""])
 
     const [stateOfWord, setStateOfWord] = useState([null, null, null, null, null])

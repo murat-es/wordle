@@ -3,13 +3,11 @@ import Word from './components/Word/Word';
 import React, { useState, useEffect, useLayoutEffect } from 'react'
 
 function App() {
-  const word1 = ["i", "y", "i", "c", "e"]
   const wordAmount = 6;
   const [turn, setTurn] = useState(0);
-  const [getWord, setGetWord] = useState(["m", "u", "r", "a", "t"]);
+  const [getWord, setGetWord] = useState([]);
   const [gameOver, setGameOver] = useState(false);
 
-  console.log("getWord", getWord)
   useEffect(() => {
 
 
