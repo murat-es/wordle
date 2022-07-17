@@ -19,11 +19,9 @@ const Header = () => {
             <div className={classes.logo}>
                 WORDLE
             </div>
-
             <div className={classes.others} >
                 <div onClick={changeLanguage}>
                     {language === "tr" ? "TR" : "EN"}
-
                 </div>
                 <div onClick={changeTheme}>
                     {theme === "light" ? "Light" : "Dark"}

@@ -45,6 +45,7 @@ function App() {
             })
           }
           {gameOver && <div>Tebrikler</div>}
+          {getWord}
         </div>
       </div>
 
