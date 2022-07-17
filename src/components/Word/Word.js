@@ -1,12 +1,10 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from "./Word.module.css"
 
 const Word = ({ word1, turn, order, setTurn, setGameOver, gameOver }) => {
+
     const [input, setInput] = useState(["", "", "", "", ""])
-
     const [stateOfWord, setStateOfWord] = useState([null, null, null, null, null])
-
-
 
     const checkFull = () => {
         for (let i = 0; i < 5; i++) {
@@ -95,6 +93,14 @@ const Word = ({ word1, turn, order, setTurn, setGameOver, gameOver }) => {
         setStateOfWord([...copyState])
 
     }
+
+    //when word is founded reset the state
+    useEffect(() => {
+        if (!gameOver) {
+            setInput(["", "", "", "", ""])
+            setStateOfWord([null, null, null, null, null])
+        }
+    }, [gameOver])
 
     return (
         <div className={classes.container} >

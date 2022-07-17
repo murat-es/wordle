@@ -10,7 +10,9 @@ const Header = () => {
         setLanguage(language === "tr" ? "en" : "tr")
     }
     const changeTheme = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light');
+        let change = (theme === 'light' ? 'dark' : 'light')
+        setTheme(change);
+        localStorage.setItem('theme', change);
     };
 
     return (

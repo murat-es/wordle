@@ -6,3 +6,22 @@
   background-color: black;
   color: white;
 }
+.congrats {
+  margin-top: 1rem;
+}
+.text {
+  color: green;
+  font-weight: bold;
+}
+.playButton {
+  margin-top: 0.5rem;
+  width: 22rem;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 0.5rem;
+}
+.playButton:hover {
+  color: white;
+  background-color: green;
+  cursor: pointer;
+}
