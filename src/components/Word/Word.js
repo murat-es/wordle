@@ -58,11 +58,13 @@ const Word = ({ word1, turn, order, setTurn, setGameOver, gameOver }) => {
     }, [turn, word1])
 
     const checkOver = () => {
+
         for (let i = 0; i < 5; i++) {
             if (stateOfWord[i] !== 1) {
                 return false
             }
         }
+
         setGameOver(true)
         return true
     }
@@ -96,11 +98,9 @@ const Word = ({ word1, turn, order, setTurn, setGameOver, gameOver }) => {
 
     //when word is founded reset the state
     useEffect(() => {
-        if (!gameOver) {
-            setInput(["", "", "", "", ""])
-            setStateOfWord([null, null, null, null, null])
-        }
-    }, [gameOver])
+        setInput(["", "", "", "", ""])
+        setStateOfWord([null, null, null, null, null])
+    }, [word1])
 
     return (
         <div className={classes.container} >

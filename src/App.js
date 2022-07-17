@@ -9,8 +9,8 @@ function App() {
   const [turn, setTurn] = useState(0);
   const [getWord, setGetWord] = useState([]);
   const [gameOver, setGameOver] = useState(false);
-  const [language, setLanguage] = useState("tr")
-  const [theme, setTheme] = useState(localStorage.getItem('theme'));
+  const [language, setLanguage] = useState(localStorage.getItem('language') !== null ? localStorage.getItem('language') : "tr")
+  const [theme, setTheme] = useState(localStorage.getItem('theme') !== null ? localStorage.getItem('theme') : "light");
 
   const fetchWord = () => {
     fetch("https://3.68.135.14/api/word/" + language + "/5/1")
@@ -30,12 +30,11 @@ function App() {
     setTheme
   }
 
-
+  //reset state and fetch new word
   const playAgain = () => {
     setGetWord(fetchWord)
     setGameOver(false)
     setTurn(0)
-
   }
 
   return (
@@ -48,15 +47,30 @@ function App() {
               return <Word word1={getWord} key={index} turn={turn} order={index} setTurn={setTurn} gameOver={gameOver} setGameOver={setGameOver} />
             })
           }
-          {gameOver &&
-            <div className={classes.congrats}>
-              <div className={classes.text}>
-                Tebrikler<br />
-                Kelimeyi buldunuz
-              </div>
-              <button className={classes.playButton} onClick={playAgain}>Tekrar Oyna </button>
-            </div>}
-          {console.log(getWord)}
+          <div className={classes.congrats}>
+
+            {gameOver &&
+              <>
+                <div className={classes.textSuccess}>
+                  Tebrikler<br />
+                  Kelimeyi buldunuz
+                </div>
+                <button className={classes.playAgainSuccess} onClick={playAgain}>Tekrar Oyna </button>
+              </>
+            }
+            {
+              (turn === wordAmount && gameOver === false)
+              &&
+              <>
+                <div className={classes.textFail}>
+                  Kelimeyi bulamadınız<br />
+                  Kelime: {getWord}
+                </div>
+                <button className={classes.playAgainFail} onClick={playAgain}>Tekrar Oyna </button>
+
+              </>
+            }
+          </div>
         </div>
       </div>
 

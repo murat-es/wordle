@@ -7,7 +7,10 @@ const Header = () => {
     const { language, setLanguage, theme, setTheme } = useContext(MainContext)
 
     const changeLanguage = () => {
-        setLanguage(language === "tr" ? "en" : "tr")
+        let change = language === "tr" ? "en" : "tr"
+        setLanguage(change)
+        localStorage.setItem('language', change);
+
     }
     const changeTheme = () => {
         let change = (theme === 'light' ? 'dark' : 'light')
