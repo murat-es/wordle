@@ -1,0 +1,21 @@
+.container {
+  border-bottom: 1px solid lightgray;
+  height: 3rem;
+  display: flex;
+}
+.logo {
+  flex-grow: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.others {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.others:hover {
+  cursor: pointer;
+}

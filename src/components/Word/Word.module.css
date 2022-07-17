@@ -1,6 +1,6 @@
 .container {
   margin-top: 1rem;
-  width: 25rem;
+  width: 22rem;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -21,6 +21,10 @@
   align-items: center;
   justify-content: center;
   font-size: 2rem;
+}
+.bigger {
+  width: 5rem;
+  height: 5rem;
 }
 .activeWord {
   border-color: gray;

@@ -103,7 +103,7 @@ const Word = ({ word1, turn, order, setTurn, setGameOver, gameOver }) => {
                 return (
                     <div key={index} className={
                         `${classes.word} ${input[index] !== "" && classes.activeWord} 
-                        ${stateOfWord[index] === 1 && classes.green} 
+                        ${stateOfWord[index] === 1 && classes.green}
                         ${stateOfWord[index] === 0 && classes.gray}
                         ${stateOfWord[index] === -1 && classes.red}`
                     }>{input[index].toLocaleUpperCase('tr-TR')}</div>
