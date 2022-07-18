@@ -51,24 +51,49 @@ function App() {
           <div className={classes.congrats}>
 
             {gameOver &&
-              <>
-                <div className={classes.textSuccess}>
-                  Tebrikler<br />
-                  Kelimeyi buldunuz
-                </div>
-                <button className={classes.playAgainSuccess} onClick={playAgain}>Tekrar Oyna </button>
-              </>
+              (language === "tr"
+                ?
+                <>
+                  <div className={classes.textSuccess}>
+
+                    Tebrikler<br />
+                    Kelimeyi buldunuz
+                  </div>
+                  <button className={classes.playAgainSuccess} onClick={playAgain}>Tekrar Oyna </button>
+                </>
+                :
+                <>
+                  <div className={classes.textSuccess}>
+                    Congratulations!<br />
+                    You found the word
+                  </div>
+                  <button className={classes.playAgainSuccess} onClick={playAgain}>Play Again </button>
+                </>
+              )
+
             }
             {
               (turn === wordAmount && gameOver === false)
               &&
-              <>
-                <div className={classes.textFail}>
-                  Kelimeyi bulamadınız<br />
-                  Kelime: {getWord}
-                </div>
-                <button className={classes.playAgainFail} onClick={playAgain}>Tekrar Oyna </button>
-              </>
+              (language === "tr"
+                ?
+                <>
+                  <div className={classes.textFail}>
+                    Kelimeyi bulamadınız<br />
+                    Kelime: {getWord}
+                  </div>
+                  <button className={classes.playAgainFail} onClick={playAgain}>Tekrar Oyna </button>
+                </>
+                :
+                <>
+                  <div className={classes.textFail}>
+                    You couldn't find the word<br />
+                    Word: {getWord}
+                  </div>
+                  <button className={classes.playAgainFail} onClick={playAgain}>Play Again </button>
+                </>
+              )
+
             }
             {console.log(getWord)}
 

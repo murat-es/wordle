@@ -27,8 +27,22 @@
   width: 5rem;
   height: 5rem;
 }
+
+@keyframes example {
+  from {
+    transform: scale(1);
+    /* background-color: rgba(0, 0, 0, 0.504); */
+  }
+  to {
+    transform: scale(1.05);
+    /* background-color: rgb(255, 255, 255); */
+  }
+}
+
 .activeWord {
   border-color: gray;
+  animation-name: example;
+  animation-duration: 0.3s;
 }
 
 .green {

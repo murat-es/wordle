@@ -25,10 +25,10 @@ const Header = () => {
                 WORDLE
             </div>
             <div className={classes.others} >
-                <div onClick={changeLanguage}>
+                <div onClick={changeLanguage} className={classes.lang}>
                     {language === "tr" ? "TR" : "EN"}
                 </div>
-                <div onClick={changeTheme}>
+                <div onClick={changeTheme} className={classes.theme}>
                     {theme === "light" ? "Light" : "Dark"}
                 </div>
             </div>

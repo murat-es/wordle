@@ -108,7 +108,8 @@ const Word = ({ word1, turn, order, setTurn, setGameOver, gameOver }) => {
             {input.map((letter, index) => {
                 return (
                     <div key={index} className={
-                        `${classes.word} ${input[index] !== "" && classes.activeWord} 
+                        `${classes.word} 
+                        ${input[index] !== "" && classes.activeWord} 
                         ${stateOfWord[index] === 1 && classes.green}
                         ${stateOfWord[index] === 0 && classes.gray}
                         ${stateOfWord[index] === -1 && classes.red}`
