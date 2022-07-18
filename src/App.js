@@ -20,7 +20,8 @@ function App() {
   }
 
   useEffect(() => {
-    fetchWord()
+    //fetchWord()
+    playAgain()
   }, [language])
 
   const data = {
@@ -67,9 +68,10 @@ function App() {
                   Kelime: {getWord}
                 </div>
                 <button className={classes.playAgainFail} onClick={playAgain}>Tekrar Oyna </button>
-
               </>
             }
+            {console.log(getWord)}
+
           </div>
         </div>
       </div>
