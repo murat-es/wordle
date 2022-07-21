@@ -104,6 +104,7 @@ const Word = ({ word1, turn, order, setTurn, setGameOver, gameOver }) => {
     useEffect(() => {
         setInput(["", "", "", "", ""])
         setStateOfWord([null, null, null, null, null])
+        setFlip(false)
     }, [word1])
 
     return (

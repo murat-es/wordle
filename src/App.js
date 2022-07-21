@@ -95,7 +95,7 @@ function App() {
               )
 
             }
-            {console.log(getWord)}
+            {/* {console.log(getWord)} */}
 
           </div>
         </div>
