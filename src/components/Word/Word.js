@@ -7,6 +7,8 @@ const Word = ({ word1, turn, order, setTurn, setGameOver, gameOver }) => {
     const [stateOfWord, setStateOfWord] = useState([null, null, null, null, null])
 
     const [flip, setFlip] = useState(false)
+    const [wrongAnswer, setWrongAnswer] = useState(false)
+
 
     const checkFull = () => {
         for (let i = 0; i < 5; i++) {
@@ -28,6 +30,9 @@ const Word = ({ word1, turn, order, setTurn, setGameOver, gameOver }) => {
                 }
             }
             setInput([...copyInput])
+        }
+        else if (e.key === "Enter" && !checkFull()) {
+            setWrongAnswer(prev => !prev)
         }
 
         else if (e.key === "Enter" && checkFull()) {
@@ -113,7 +118,8 @@ const Word = ({ word1, turn, order, setTurn, setGameOver, gameOver }) => {
             {input.map((letter, index) => {
                 return (
                     <div key={index} className={
-                        `${classes.word} 
+                        `${classes.word}
+                        ${wrongAnswer && classes.wrongAnswer}  
                         ${flip && classes.flipWords}
                         ${input[index] !== "" && classes.activeWord} 
                         ${stateOfWord[index] === 1 && classes.green}
