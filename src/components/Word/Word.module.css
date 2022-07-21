@@ -23,9 +23,17 @@
   font-size: 2rem;
   font-weight: bold;
 }
-.bigger {
-  width: 5rem;
-  height: 5rem;
+
+@keyframes flipWord {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
 }
 
 @keyframes example {
@@ -37,6 +45,12 @@
     transform: scale(1.05);
     /* background-color: rgb(255, 255, 255); */
   }
+}
+.flipWords {
+  -moz-animation: flipWord 0.5s both linear !important;
+  -o-animation: flipWord 0.5s both linear !important;
+  -webkit-animation: flipWord 0.5s both linear !important;
+  animation: flipWord 0.5s both linear !important;
 }
 
 .activeWord {
