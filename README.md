@@ -1,6 +1,6 @@
 # WORDLE
 
-Live -> [https://wordleoyna.netlify.app](https://github.com/facebook/create-react-app)
+Live -> [https://wordleoyna.netlify.app](wordleoyna.netlify.app)
 
 ## Backend of Project
 
