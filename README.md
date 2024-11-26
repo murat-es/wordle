@@ -13,5 +13,5 @@ Live -> [https://wordleoyna.netlify.app](wordleoyna.netlify.app)
 ![alt text](https://github.com/murat-es/wordle/blob/master/public/wordleScreenShot.png)
 
 ### Run Project
-`cd ./wordle` \
+`npm i` \
 `npm start`
